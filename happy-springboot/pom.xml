@@ -28,16 +28,6 @@
   
    <!-- Maven区别对待release版本的构件和snapshot版本的构件，snapshot为开发过程中的版本，实时，但不稳定，release版本则比较稳定。Maven会根据你项目的版本来判断将构件分发到哪个仓库。
 一般来说，分发构件到远程仓库需要认证，如果你没有配置任何认证信息，你往往会得到401错误。这个时候，如下在settings.xml中配置认证信息 -->
-   	<repositories>
-		<repository>
-	
-		</repository>
-	</repositories>
-	
-  	<distributionManagement>
-
-	</distributionManagement>
-
 
  
     <profiles>
