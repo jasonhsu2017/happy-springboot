@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ppdai.spring.boot.dao.UserMapper">
+
+    <select id="getUser" resultType="com.ppdai.spring.boot.model.User">
+        SELECT id, username userName, `password` password FROM tb_user WHERE id = #{userId}
+    </select>
+
+    <insert id="insertUser" parameterType="com.ppdai.spring.boot.model.User" keyProperty="id" useGeneratedKeys="true">
+        insert into tb_user (username,`password`) values (#{userName},#{password})
+    </insert>
+
+    <update id="updateUser" parameterType="com.ppdai.spring.boot.model.User">
+        update tb_user set username = #{userName} ,`password` = #{password} where id = #{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="int">
+        delete from  tb_user where id = #{id}
+    </delete>
+</mapper>
