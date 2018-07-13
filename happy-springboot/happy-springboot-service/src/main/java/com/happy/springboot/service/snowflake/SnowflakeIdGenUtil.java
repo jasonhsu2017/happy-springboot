@@ -49,7 +49,7 @@ public class SnowflakeIdGenUtil {
         return genetatorId();
     }
     public synchronized List<Long> nextIdList(int qty){
-        List<Long> result = new ArrayList<>(qty);
+        List<Long> result = new ArrayList<Long>(qty);
         for(int i =0;i<qty;i++){
             result.add( genetatorId() );
         }

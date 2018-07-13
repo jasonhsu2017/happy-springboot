@@ -1,6 +1,31 @@
-dataSource:
-  springboot:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.212.161:3406/springboot?zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=utf-8
-    username: root
-    password: abc@123
+spring:
+  dataSource:
+    happyboot:
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/happy_springboot?characterEncoding=utf8&useSSL=true
+      username: root
+      password: admin
+    extdsnames: happyboot01,happyboot02
+    happyboot01:
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/happyboot01?characterEncoding=utf8&useSSL=true
+      username: root
+      password: admin 
+    happyboot02:
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/happyboot02?characterEncoding=utf8&useSSL=true
+      username: root
+      password: admin      
+      
+dbShardingStrategy:
+    mod6000: 
+      totalDb: 6
+      totalTable: 6000
+      numLen: 2
+      start: 1
+      
+tableShardingStrategy:
+    mod6000: 
+      totalTable: 6000
+      numLen: 4
+      start: 0  
