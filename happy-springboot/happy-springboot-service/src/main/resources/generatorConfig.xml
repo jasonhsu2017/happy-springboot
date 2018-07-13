@@ -20,10 +20,7 @@
 
 
         <!--jdbc的数据库连接 -->
-        <!--<jdbcConnection driverClass="net.sourceforge.jtds.jdbc.Driver" connectionURL="jdbc:jtds:sqlserver://fat-2.mssql.ppdaidb.com:2433;DatabaseName=ppdai_invest_extend"
-                        userId="test_new" password="ppdtest@tGzu590z">
-        </jdbcConnection>-->
-        
+
         <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/happy_springboot"
                         userId="root" password="admin">
         </jdbcConnection>
