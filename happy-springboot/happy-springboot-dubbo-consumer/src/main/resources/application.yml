@@ -3,7 +3,7 @@ spring:
     active: dev
     
 server:
- port: 8085    
+ port: 8080    
  
 
 

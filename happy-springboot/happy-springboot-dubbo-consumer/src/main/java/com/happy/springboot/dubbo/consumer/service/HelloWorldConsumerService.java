@@ -7,7 +7,7 @@ import com.happy.springboot.dubbo.contract.service.IHelloWorldDubboService;
 
 @Component
 public class HelloWorldConsumerService {
-	  @Reference(url = "dubbo://127.0.0.1:20880")
+	  @Reference(interfaceClass=IHelloWorldDubboService.class)
 	  private IHelloWorldDubboService helloService;
 	  
 	  public String sayHello(){

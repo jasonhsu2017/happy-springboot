@@ -11,10 +11,6 @@ spring:
 #暴露服务方式
     protocol:
       id: dubbo
-#默认名称，勿修改
-      name: dubbo
-#暴露服务端口 
-      port: 20880
-      status : server
+
 
     
