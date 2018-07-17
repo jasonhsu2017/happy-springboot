@@ -16,6 +16,13 @@ spring:
       url: jdbc:mysql://localhost:3306/happyboot02?characterEncoding=utf8&useSSL=true
       username: root
       password: admin      
+
+dubbo:
+ application:
+     name: dubbo-springboot-starter-provider
+ registry:
+     address: zookeeper://192.168.0.10:2181?backup=192.168.0.20:2181,192.168.0.30:2181
+ protocol: dubbo
       
 dbShardingStrategy:
     mod6000: 
@@ -29,3 +36,5 @@ tableShardingStrategy:
       totalTable: 6000
       numLen: 4
       start: 0  
+      
+      
