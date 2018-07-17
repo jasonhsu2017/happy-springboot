@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.javaer</groupId>
+    <artifactId>happy-springboot</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>happy-springboot-dubbo-provide</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>happy-springboot-dubbo-provide</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+ 
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    
+    
+    	   <dependency>
+        <groupId>com.alibaba.spring.boot</groupId>
+        <artifactId>dubbo-spring-boot-starter</artifactId>
+        <version>2.0.0</version>
+    </dependency>
+    
+        
+   <dependency>
+       <groupId>com.javaer</groupId>
+  		<artifactId>happy-springboot-dubbo-contract</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    
+<!--  
+   <dependency>
+       <groupId>com.javaer</groupId>
+  		<artifactId>happy-springboot-service</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    
+ -->
+  </dependencies>
+  <build>
+    <finalName>happy-springboot-dubbo-provide</finalName>
+  
+    <pluginManagement>
+  	<plugins>
+			<!-- 不使用继承，而是导入打包 -->
+		   <plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${spring-boot.version}</version>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<copy
+									file="${basedir}/target/classes/profiles/${env}/application.yml"
+									tofile="${basedir}/target/classes/application.yml" overwrite="true" />
+								<delete dir="target/classes/conf/env/" />
+								<copy todir="target" overwrite="true">
+									<fileset dir="deploy/${env}" />
+								</copy>
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+	 </plugins>		
+    </pluginManagement>
+  
+  
+  
+  </build>
+</project>

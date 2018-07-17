@@ -1,0 +1,21 @@
+spring:
+  dubbo: 
+    application:
+#注册在注册中心的名称
+      id: dubbo-springboot-starter-provider
+      name: dubbo-springboot-starter-provider
+#注册中心地址，zookeeper集群，启动输出可以看见链接了多个
+#单zookeeper服务：
+    registry: 
+      address: zookeeper://192.168.0.10:2181?backup=192.168.0.20:2181,192.168.0.30:2181
+#暴露服务方式
+    protocol:
+      id: dubbo
+#默认名称，勿修改
+      name: dubbo
+#暴露服务端口 
+      port: 20880
+      status : server
+#调用dubbo组建扫描的项目路径
+    scan: com.happy.springboot.dubbo.provide.service.impl
+    

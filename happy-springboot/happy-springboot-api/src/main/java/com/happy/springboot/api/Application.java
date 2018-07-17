@@ -8,10 +8,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerA
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.ImportResource;
 
-import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
-import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
 import com.happy.springboot.service.manager.dyndatasource.core.DyncDataSourceRegister;
 
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class, MybatisAutoConfiguration.class })
@@ -20,7 +17,7 @@ import com.happy.springboot.service.manager.dyndatasource.core.DyncDataSourceReg
 @ComponentScan(basePackages = { "com.happy.springboot.api","com.happy.springboot.service"})
 //@EnableConfigurationProperties
 //@ImportResource("classpath:spring-dubbo.xml")
-@EnableDubboConfiguration()
+
 public class Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);

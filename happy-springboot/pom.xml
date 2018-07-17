@@ -9,6 +9,11 @@
   <modules>
     <module>happy-springboot-api</module>
     <module>happy-springboot-service</module>
+    <module>happy-springboot-dubbo-provider</module>
+    <module>happy-springboot-dubbo-provide</module>
+    <module>happy-springboot-dubbo-consumer</module>
+    <module>happy-springboot-dubbo-dto</module>
+    <module>happy-springboot-dubbo-contract</module>
   </modules>
   
   <parent>
