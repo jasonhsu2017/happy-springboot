@@ -21,7 +21,6 @@ import com.happy.springboot.service.manager.dyndatasource.core.DyncDataSourceReg
 //@EnableConfigurationProperties
 //@ImportResource("classpath:spring-dubbo.xml")
 @EnableDubboConfiguration()
-@EnableDubbo(scanBasePackages = "com.happy.springboot.service.dubbo.service") 
 public class Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
