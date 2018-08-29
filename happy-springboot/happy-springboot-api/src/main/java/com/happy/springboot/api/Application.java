@@ -19,6 +19,8 @@ import com.happy.springboot.service.manager.dyndatasource.core.DyncDataSourceReg
 //@ImportResource("classpath:spring-dubbo.xml")
 
 public class Application {
+
+
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}

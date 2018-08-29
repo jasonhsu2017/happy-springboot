@@ -10,12 +10,13 @@ import com.happy.springboot.dubbo.consumer.service.HelloWorldConsumerService;
 @RequestMapping("hello")
 public class HelloWorldController {
 
-	@Autowired
-	private HelloWorldConsumerService HelloWorldConsumerService;
-	
-	@RequestMapping("springboot")
-	public String helloWorld() {
-		return HelloWorldConsumerService.sayHello();
-	}
+    @Autowired
+    private HelloWorldConsumerService HelloWorldConsumerService;
+
+    @RequestMapping("springboot")
+    public String helloWorld() {
+       //ok
+        return HelloWorldConsumerService.sayHello();
+    }
 
 }
