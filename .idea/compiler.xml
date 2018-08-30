@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="happy-springboot-api" />
+        <module name="happy-springboot-dubbo-consumer" />
+        <module name="happy-springboot-dubbo-contract" />
+        <module name="happy-springboot-dubbo-provide" />
+        <module name="happy-springboot-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="happy-springboot" target="1.6" />
+      <module name="happy-springboot-api" target="1.6" />
+      <module name="happy-springboot-dubbo-consumer" target="1.6" />
+      <module name="happy-springboot-dubbo-contract" target="1.6" />
+      <module name="happy-springboot-dubbo-provide" target="1.6" />
+      <module name="happy-springboot-service" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

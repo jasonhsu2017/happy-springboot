@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/happy-springboot/happy-springboot.iml" filepath="$PROJECT_DIR$/happy-springboot/happy-springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/happy-springboot/happy-springboot-api/happy-springboot-api.iml" filepath="$PROJECT_DIR$/happy-springboot/happy-springboot-api/happy-springboot-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/happy-springboot/happy-springboot-dubbo-consumer/happy-springboot-dubbo-consumer.iml" filepath="$PROJECT_DIR$/happy-springboot/happy-springboot-dubbo-consumer/happy-springboot-dubbo-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/happy-springboot/happy-springboot-dubbo-contract/happy-springboot-dubbo-contract.iml" filepath="$PROJECT_DIR$/happy-springboot/happy-springboot-dubbo-contract/happy-springboot-dubbo-contract.iml" />
+      <module fileurl="file://$PROJECT_DIR$/happy-springboot/happy-springboot-dubbo-provide/happy-springboot-dubbo-provide.iml" filepath="$PROJECT_DIR$/happy-springboot/happy-springboot-dubbo-provide/happy-springboot-dubbo-provide.iml" />
+      <module fileurl="file://$PROJECT_DIR$/happy-springboot/happy-springboot-service/happy-springboot-service.iml" filepath="$PROJECT_DIR$/happy-springboot/happy-springboot-service/happy-springboot-service.iml" />
+    </modules>
+  </component>
+</project>
